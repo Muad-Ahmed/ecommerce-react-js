@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PageTransition from "../../components/PageTransition";
-import Product from "../../components/slideProducts/product";
+import Product from "../../components/slideProducts/Product";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 
 function SearchResultPage() {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../components/contexts/CartContext";
 import PageTransition from "../../components/PageTransition";
-import Product from "../../components/slideProducts/product";
+import Product from "../../components/slideProducts/Product";
 
 function Favorites() {
   const { favorites } = useContext(CartContext);
