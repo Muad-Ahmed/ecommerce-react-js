@@ -1,5 +1,5 @@
 // import React, { useRef, useState } from "react";
-import Product from "./product";
+import Product from "./Product";
 import "./slideProduct.css";
 // Import Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
