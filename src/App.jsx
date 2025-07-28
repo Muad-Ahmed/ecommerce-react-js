@@ -10,6 +10,7 @@ import { AnimatePresence } from "motion/react";
 import CategoryPage from "./page/categoryPage/CategoryPage";
 import SearchResultPage from "./page/searchResult/SearchResultPage";
 import Favorites from "./page/favorites/Favorites";
+import Footer from "./components/footer/Footer";
 
 const categories = [
   "smartphones",
@@ -52,6 +53,12 @@ function App() {
           <Route path="/category/:category" element={<CategoryPage />} />
         </Routes>
       </AnimatePresence>
+
+    
+        <footer>
+          <Footer />
+        </footer>
+      
     </>
   );
 }
