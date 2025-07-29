@@ -14,6 +14,7 @@ import AboutUs from "./page/aboutUs/AboutUs";
 import Footer from "./components/footer/Footer";
 import Accessories from "./page/accessories/Accessories";
 import Blog from "./page/blog/Blog";
+import Contact from "./page/contact/Contact";
 
 const categories = [
   "smartphones",
@@ -57,6 +58,7 @@ function App() {
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
 
