@@ -10,6 +10,7 @@ import { AnimatePresence } from "motion/react";
 import CategoryPage from "./page/categoryPage/CategoryPage";
 import SearchResultPage from "./page/searchResult/SearchResultPage";
 import Favorites from "./page/favorites/Favorites";
+import AboutUs from "./page/aboutUs/AboutUs";
 import Footer from "./components/footer/Footer";
 
 const categories = [
@@ -46,6 +47,7 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home categories={categories} />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/search" element={<SearchResultPage />} />
@@ -54,11 +56,9 @@ function App() {
         </Routes>
       </AnimatePresence>
 
-    
-        <footer>
-          <Footer />
-        </footer>
-      
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
