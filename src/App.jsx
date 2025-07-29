@@ -12,6 +12,7 @@ import SearchResultPage from "./page/searchResult/SearchResultPage";
 import Favorites from "./page/favorites/Favorites";
 import AboutUs from "./page/aboutUs/AboutUs";
 import Footer from "./components/footer/Footer";
+import Accessories from "./page/accessories/Accessories";
 
 const categories = [
   "smartphones",
@@ -53,6 +54,7 @@ function App() {
           <Route path="/search" element={<SearchResultPage />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/accessories" element={<Accessories />} />
         </Routes>
       </AnimatePresence>
 

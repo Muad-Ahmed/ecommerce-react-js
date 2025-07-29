@@ -1,0 +1,135 @@
+.accessories-page {
+  padding: 60px 0;
+  background: var(--white-color);
+}
+
+.accessories-hero {
+  background: linear-gradient(135deg, var(--main-color) 0%, #0079ca 100%);
+  padding: 70px 0 50px;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 60px;
+}
+
+.accessories-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--white-color);
+}
+
+.accessories-hero p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+}
+
+.accessories-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.accessories-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 22px;
+  color: var(--color-heading);
+}
+
+.accessories-text p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: var(--p-color);
+}
+
+.accessories-image {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 144, 240, 0.13);
+}
+
+.accessories-image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.accessories-image:hover img {
+  transform: scale(1.04);
+}
+
+.featured-accessories-section {
+  background: var(--bg-color);
+  padding: 60px 0;
+  margin-bottom: 60px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.featured-item {
+  padding: 28px 18px;
+  background: var(--white-color);
+  border-radius: 13px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+  transition: transform 0.3s ease;
+}
+
+.featured-item:hover {
+  transform: translateY(-8px);
+}
+
+.featured-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 1.7rem;
+  color: var(--white-color);
+}
+
+.featured-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-heading);
+}
+
+.featured-item p {
+  color: var(--p-color);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .accessories-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .accessories-hero h1 {
+    font-size: 2.1rem;
+  }
+  .accessories-text h2 {
+    font-size: 1.4rem;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
