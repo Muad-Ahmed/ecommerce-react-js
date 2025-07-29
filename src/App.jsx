@@ -13,6 +13,7 @@ import Favorites from "./page/favorites/Favorites";
 import AboutUs from "./page/aboutUs/AboutUs";
 import Footer from "./components/footer/Footer";
 import Accessories from "./page/accessories/Accessories";
+import Blog from "./page/blog/Blog";
 
 const categories = [
   "smartphones",
@@ -55,6 +56,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/accessories" element={<Accessories />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </AnimatePresence>
 
