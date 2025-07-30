@@ -4,10 +4,13 @@ import { TiThMenu } from "react-icons/ti";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
+import { SlMenu } from "react-icons/sl";
+import { IoClose } from "react-icons/io5";
 
 function BtmHeader({ categoriesList }) {
   const [categories, setCategories] = useState([]);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const location = useLocation();
 
@@ -15,18 +18,21 @@ function BtmHeader({ categoriesList }) {
 
   useEffect(() => {
     setIsCategoryOpen(false);
+    setIsMenuOpen(false);
   }, [location.pathname]);
+
   useEffect(() => {
     const onClickOutside = (e) => {
       if (isCategoryOpen && !listRef.current.contains(e.target)) {
         setIsCategoryOpen(false);
+        setIsMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", onClickOutside);
     return () => {
       document.removeEventListener("mousedown", onClickOutside);
     };
-  }, [isCategoryOpen]);
+  }, [isCategoryOpen, isMenuOpen]);
 
   const navLinks = [
     { title: "Home", link: "/" },
@@ -50,28 +56,40 @@ function BtmHeader({ categoriesList }) {
     <div className="btm-header">
       <div className="container">
         <nav className="nav">
-          <div className="category-nav" ref={listRef}>
+          <div className="nav-menues">
             <div
-              className="category-btn"
-              onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+              className="menu-icon"
+              ref={listRef}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <TiThMenu />
-              <p>Browse Category</p>
-              <MdOutlineArrowDropDown />
+              <SlMenu className="burger-icon" />
             </div>
+            <div className="category-nav" ref={listRef}>
+              <div
+                className="category-btn"
+                onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+              >
+                <TiThMenu />
+                <p>Browse Category</p>
+                <MdOutlineArrowDropDown />
+              </div>
 
-            <div
-              className={`category-nav-list ${isCategoryOpen ? "active" : ""}`}
-            >
-              {categories.map((category) => (
-                <Link to={`category/${category.slug}`} key={category.slug}>
-                  {category.name}
-                </Link>
-              ))}
+              <div
+                className={`category-nav-list ${
+                  isCategoryOpen ? "active" : ""
+                }`}
+              >
+                {categories.map((category) => (
+                  <Link to={`category/${category.slug}`} key={category.slug}>
+                    {category.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="nav-links">
+          <div className={`nav-links  ${isMenuOpen ? "active" : ""}`}>
+            <IoClose className="close-btn" onClick={() => setIsMenuOpen(false)} />
             {navLinks.map((item) => (
               <li
                 key={item.link}

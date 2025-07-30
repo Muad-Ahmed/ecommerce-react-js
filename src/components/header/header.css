@@ -93,6 +93,34 @@ header {
   height: 50px;
 }
 
+.btm-header .nav-menues {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.btm-header .burger-icon {
+  font-size: 45px;
+  color: var(--white-color);
+  cursor: pointer;
+  border: 2px solid var(--white-color);
+  padding: 8px;
+  border-radius: 2px;
+  margin-top: 3px;
+}
+
+.btm-header .nav-menues .nav-menu {
+  font-size: 16px;
+  color: var(--white-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  .btm-header .menu-icon {
+    display: none;
+  }
+}
 .btm-header .category-nav {
   width: 220px;
   height: 100%;
@@ -155,16 +183,15 @@ header {
   display: flex;
   height: 100%;
 }
+.nav-links .close-btn {
+  display: none;
+}
 
 .btm-header .nav-links li {
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 25px;
-}
-
-.btm-header .nav-links li.active {
-  background: #0079ca;
 }
 
 .btm-header .nav-links li a {
@@ -214,4 +241,82 @@ header {
 
 .suggestions li img {
   width: 30px;
+}
+@media (max-width: 1024px) {
+  .btm-header nav {
+    display: block;
+  }
+  .btm-header .nav {
+    height: 60px;
+  }
+
+  .btm-header .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    background: var(--white-color);
+    z-index: 9999;
+    border-top: 1px solid var(--border-color);
+    align-items: center;
+    padding-top: 100px;
+    margin-left: -400px;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links.active .close-btn {
+    display: block;
+    position: absolute;
+    right: 45px;
+    top: 45px;
+    font-size: 28px;
+    border: 2px solid black;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .btm-header .nav-links li {
+    height: 75px;
+  }
+
+  .btm-header .nav-links li a {
+    color: var(--p-color);
+    font-size: 18px;
+  }
+  .btm-header .nav-links li.active a {
+    color: var(--main-color);
+  }
+  .btm-header .nav-links.active {
+    margin-left: 0;
+  }
+}
+@media (max-width: 940px) {
+  .top-header .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .top-header .logo {
+    min-width: 140px;
+  }
+  .top-header .box-container {
+    width: 80%;
+    order: 3;
+    margin: 15px auto 5px;
+  }
+  .top-header .search-box {
+    width: 100%;
+  }
+  .top-header .search-box input {
+    flex: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .btm-header .category-nav {
+    display: none;
+  }
+    .btm-header .nav-links {
+      width: 80%;
+    }
 }

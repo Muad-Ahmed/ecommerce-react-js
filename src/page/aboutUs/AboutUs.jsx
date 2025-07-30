@@ -254,7 +254,7 @@ const AboutUs = () => {
           <div className="contact-info">
             {contactInfo.map((contact, index) => (
               <div key={index} className="contact-item">
-                <div className="contact-icon">{contact.icon}</div>
+                <div className="contact-icon" >{contact.icon}</div>
                 <h4>{contact.title}</h4>
                 <p>{contact.info}</p>
               </div>
