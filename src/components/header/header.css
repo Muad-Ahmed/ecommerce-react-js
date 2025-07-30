@@ -259,7 +259,7 @@ header {
     width: 400px;
     height: 100vh;
     background: var(--white-color);
-    z-index: 9999;
+    z-index: 99999;
     border-top: 1px solid var(--border-color);
     align-items: center;
     padding-top: 100px;
@@ -316,7 +316,7 @@ header {
   .btm-header .category-nav {
     display: none;
   }
-    .btm-header .nav-links {
-      width: 80%;
-    }
+  .btm-header .nav-links {
+    width: 80%;
+  }
 }
