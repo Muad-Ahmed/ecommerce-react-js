@@ -262,6 +262,11 @@
   font-size: 1.5rem;
   color: var(--white-color);
 }
+.contact-item .contact-details {
+  display: flex;
+  gap: 15px;
+  width: 47%;
+}
 
 .contact-item h4 {
   font-size: 1.2rem;
@@ -279,21 +284,24 @@
     grid-template-columns: 1fr;
     gap: 50px;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .contact-info {
     grid-template-columns: 1fr;
+  }
+  .contact-item .contact-details {
+    width: 80%;
   }
 }
 
@@ -301,27 +309,27 @@
   .about-hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .about-hero p {
     font-size: 1rem;
   }
-  
+
   .about-text h2 {
     font-size: 2rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .stat-number {
     font-size: 2.5rem;
   }
@@ -331,20 +339,20 @@
   .about-hero {
     padding: 60px 0;
   }
-  
+
   .about-hero h1 {
     font-size: 2rem;
   }
-  
+
   .about-text h2 {
     font-size: 1.8rem;
   }
-  
+
   .value-card {
     padding: 30px 20px;
   }
-  
+
   .team-info {
     padding: 20px;
   }
-} 
+}
