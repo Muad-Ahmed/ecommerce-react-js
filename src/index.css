@@ -126,8 +126,18 @@ a {
     padding: 170px 0 250px;
   }
 }
+@media (max-width: 960px) {
+  body {
+    padding: 170px 0 320px;
+  }
+}
 @media (max-width: 940px) {
   body {
-    padding: 235px 0 250px;
+    padding: 235px 0 320px;
+  }
+}
+@media (max-width: 570px) {
+  body {
+    padding: 235px 0 420px;
   }
 }
