@@ -23,32 +23,17 @@ function SlideProduct({ title, data }) {
           loop={true}
           pagination={true}
           autoplay={{
-            delay: 2500,
+            delay: 2500000,
             disableOnInteraction: false,
           }}
           navigation={true}
           modules={[Navigation, Autoplay]}
           breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            530: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-            },
-            830: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1200: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
+            0: { slidesPerView: 1, spaceBetween: 10 },
+            475: { slidesPerView: 2, spaceBetween: 10 },
+            570: { slidesPerView: 2, spaceBetween: 15 },
+            830: { slidesPerView: 3, spaceBetween: 150 },
+            1200: { slidesPerView: 4, spaceBetween: 25 },
           }}
           className="mySwiper"
         >
