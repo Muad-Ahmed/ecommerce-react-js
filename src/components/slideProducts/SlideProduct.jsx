@@ -23,7 +23,7 @@ function SlideProduct({ title, data }) {
           loop={true}
           pagination={true}
           autoplay={{
-            delay: 2500000,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           navigation={true}
