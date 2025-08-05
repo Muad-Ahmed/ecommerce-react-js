@@ -38,7 +38,7 @@ function SlideProduct({ title, data }) {
           className="mySwiper"
         >
           {data.map((item) => (
-            <SwiperSlide>
+            <SwiperSlide className="custom-slide">
               <Product item={item} />
             </SwiperSlide>
           ))}

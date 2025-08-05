@@ -192,6 +192,11 @@
     background-position: right -40px top 0;
   }
 }
+.custom-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 570px) and (min-width: 475px) {
   .product {
@@ -228,15 +233,5 @@
   .product .icons span {
     width: 33px;
     height: 33px;
-  }
-}
-@media (max-width: 475px) {
-  .swiper-slide {
-    margin-left: 60px;
-  }
-}
-@media (max-width: 420px) {
-  .swiper-slide {
-    margin-left: 40px;
   }
 }
