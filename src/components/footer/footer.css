@@ -3,7 +3,7 @@
   right: 0;
   left: 0;
   position: absolute;
-  background-color: #047bca;
+  background-color: #008fe8;
   z-index: 100;
   padding: 40px 10px 30px;
 }
@@ -62,7 +62,6 @@
 .footer-top .ft-form form input[type="email"] {
   height: 35px;
   width: 200px;
-  border: 2px solid #0079ca;
   border-radius: 5px;
   background-color: var(--white-color);
   padding-left: 7px;
