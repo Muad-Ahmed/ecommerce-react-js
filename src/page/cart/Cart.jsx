@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../components/contexts/CartContext";
-import { FaTrashAlt, FaLock } from "react-icons/fa";
+import { FaTrashAlt, FaShoppingCart } from "react-icons/fa";
 import "./cart.css";
 import PageTransition from "../../components/PageTransition";
 import toast from "react-hot-toast";
@@ -93,7 +93,7 @@ function Cart() {
                 type="button"
                 onClick={handleCheckout}
                 disabled={loading || cartItems.length === 0}
-                className={loading ? "loading" : ""}
+                className={loading ? "loading" : "normal"}
               >
                 {loading ? (
                   <span className="spinner-wrapper">
@@ -102,7 +102,7 @@ function Cart() {
                   </span>
                 ) : (
                   <span className="checkout-btn-label">
-                    <FaLock />
+                    <FaShoppingCart />
                     Proceed to Checkout
                   </span>
                 )}
