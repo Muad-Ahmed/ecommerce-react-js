@@ -3,6 +3,8 @@ import BtmHeader from "./components/header/BtmHeader";
 import TopHeader from "./components/header/TopHeader";
 import Home from "./page/home/Home";
 import Cart from "./page/cart/Cart";
+import CheckoutSuccess from "./page/checkout/CheckoutSuccess";
+import CheckoutCancel from "./page/checkout/CheckoutCancel";
 import ProductDetails from "./page/productDetails/ProductDetailsPage";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./components/ScrollToTop";
@@ -52,6 +54,8 @@ function App() {
           <Route path="/" element={<Home categories={categories} />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout/success" element={<CheckoutSuccess />} />
+          <Route path="/checkout/cancel" element={<CheckoutCancel />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/search" element={<SearchResultPage />} />
           <Route path="/products/:id" element={<ProductDetails />} />

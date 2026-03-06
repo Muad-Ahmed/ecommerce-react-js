@@ -1,15 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../../components/contexts/CartContext";
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaLock } from "react-icons/fa";
 import "./cart.css";
 import PageTransition from "../../components/PageTransition";
+import toast from "react-hot-toast";
 
 function Cart() {
   const { cartItems, changQuantity, removeFromCart } = useContext(CartContext);
+  const [loading, setLoading] = useState(false);
 
   const total = +cartItems
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
+
+  const handleCheckout = async () => {
+    if (cartItems.length === 0) return;
+
+    setLoading(true);
+    try {
+      const res = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cartItems,
+          successUrl: `${window.location.origin}/checkout/success`,
+          cancelUrl: `${window.location.origin}/checkout/cancel`,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error || "Checkout failed");
+
+      window.location.href = data.url;
+    } catch (err) {
+      toast.error(err.message || "Something went wrong. Please try again.");
+      setLoading(false);
+    }
+  };
+
   return (
     <PageTransition>
       <div className="checkout">
@@ -18,7 +47,7 @@ function Cart() {
 
           <div className="items">
             {cartItems.length === 0 ? (
-              <p>Your Cart is empty.</p>
+              <p className="empty-cart">Your cart is empty.</p>
             ) : (
               cartItems.map((item, index) => (
                 <div className="cart-item" key={index}>
@@ -60,7 +89,24 @@ function Cart() {
               <span className="total-checkout">${total}</span>
             </div>
             <div className="button-div">
-              <button type="submit">Place Order</button>
+              <button
+                type="button"
+                onClick={handleCheckout}
+                disabled={loading || cartItems.length === 0}
+                className={loading ? "loading" : ""}
+              >
+                {loading ? (
+                  <span className="spinner-wrapper">
+                    <span className="spinner" />
+                    Redirecting...
+                  </span>
+                ) : (
+                  <span className="checkout-btn-label">
+                    <FaLock />
+                    Proceed to Checkout
+                  </span>
+                )}
+              </button>
             </div>
           </div>
         </div>

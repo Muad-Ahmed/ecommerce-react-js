@@ -73,6 +73,10 @@ export default function CartProvider({ children }) {
     setFavorites((prevItems) => prevItems.filter((i) => i.id !== item.id));
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
@@ -87,6 +91,7 @@ export default function CartProvider({ children }) {
         removeFromFav,
         addToFav,
         favorites,
+        clearCart,
       }}
     >
       {children}
