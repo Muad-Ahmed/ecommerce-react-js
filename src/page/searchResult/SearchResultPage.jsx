@@ -38,7 +38,7 @@ function SearchResultPage() {
             {results.length > 0 ? (
               <>
                 <div className="top-slide">
-                  <h2>Results for : {query}</h2>
+                  <h2>Results for: {query}</h2>
                 </div>
                 <div
                   className="products"

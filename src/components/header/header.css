@@ -93,7 +93,7 @@ header {
   height: 50px;
 }
 
-.btm-header .nav-menues {
+.btm-header .nav-menus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +109,7 @@ header {
   margin-top: 3px;
 }
 
-.btm-header .nav-menues .nav-menu {
+.btm-header .nav-menus .nav-menu {
   font-size: 16px;
   color: var(--white-color);
   font-weight: 500;

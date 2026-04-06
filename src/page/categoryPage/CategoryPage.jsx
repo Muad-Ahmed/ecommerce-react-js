@@ -30,7 +30,7 @@ function CategoryPage() {
           <div className="container">
             <div className="top-slide">
               <h2>
-                {category.replace("-", " ")} : {categoryProducts.limit}
+                {category.replace(/-/g, " ")}: {categoryProducts.limit}
               </h2>
               <p>
                 lorem, ipsum dolor sit amet consectetur adipisicing elit.

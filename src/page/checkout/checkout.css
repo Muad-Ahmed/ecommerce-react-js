@@ -49,11 +49,9 @@
   display: inline-flex;
 }
 
-/* target the button inside the container */
 .button-div button {
   background-color: var(--main-color);
   color: white;
-  /* default text and icon color */
   border: 1px solid var(--main-color);
   padding: 12px 24px;
   cursor: pointer;
@@ -65,13 +63,11 @@
   justify-content: center;
 }
 
-/* handle hover state for non-disabled button */
 .button-div button:hover:not(:disabled) {
   background-color: white;
   color: var(--main-color);
 }
 
-/* force spans to inherit color from button and ignore global index.css */
 .checkout-btn-label,
 .spinner-wrapper {
   color: inherit !important;
@@ -81,13 +77,11 @@
   gap: 10px;
 }
 
-/* adjust spinner color to match text when white background appears on hover */
 .button-div button:hover .spinner {
   border: 3px solid rgba(0, 0, 0, 0.1);
   border-top-color: var(--main-color);
 }
 
-/* styles for disabled/loading state */
 button:disabled {
   opacity: 0.7;
   cursor: not-allowed;

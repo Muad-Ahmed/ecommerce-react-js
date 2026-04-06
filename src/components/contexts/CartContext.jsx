@@ -55,7 +55,7 @@ export default function CartProvider({ children }) {
     );
   };
 
-  const changQuantity = (id, amount) => {
+  const changeQuantity = (id, amount) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
         item.id === id
@@ -86,7 +86,7 @@ export default function CartProvider({ children }) {
       value={{
         cartItems,
         handleAddToCart,
-        changQuantity,
+        changeQuantity,
         removeFromCart,
         removeFromFav,
         addToFav,

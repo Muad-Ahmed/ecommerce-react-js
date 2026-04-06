@@ -12,7 +12,7 @@ function SlideProduct({ title, data }) {
     <div className="slide-products slide">
       <div className="container">
         <div className="top-slide">
-          <h2>{title.replace("-", " ")}</h2>
+          <h2>{title.replace(/-/g, " ")}</h2>
           <p>
             lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
             voluptates

@@ -56,7 +56,7 @@ function BtmHeader({ categoriesList }) {
     <div className="btm-header">
       <div className="container">
         <nav className="nav">
-          <div className="nav-menues">
+          <div className="nav-menus">
             <div
               className="menu-icon"
               ref={listRef}

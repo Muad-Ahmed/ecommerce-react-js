@@ -18,7 +18,7 @@ function Product({ item }) {
       toast.error(`${item.title} Removed from favorites`);
     } else {
       addToFav(item);
-      toast.success(`${item.title} Add to favorites`);
+      toast.success(`${item.title} Added to favorites`);
     }
   };
 

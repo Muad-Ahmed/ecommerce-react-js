@@ -6,7 +6,7 @@ import PageTransition from "../../components/PageTransition";
 import toast from "react-hot-toast";
 
 function Cart() {
-  const { cartItems, changQuantity, removeFromCart } = useContext(CartContext);
+  const { cartItems, changeQuantity, removeFromCart } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
 
   const total = +cartItems
@@ -62,11 +62,11 @@ function Cart() {
                         ${(item.price * item.quantity).toFixed(2)}
                       </p>
                       <div className="quantity-control">
-                        <button onClick={() => changQuantity(item.id, -1)}>
+                        <button onClick={() => changeQuantity(item.id, -1)}>
                           -
                         </button>
                         <span className="quantity">{item.quantity}</span>
-                        <button onClick={() => changQuantity(item.id, +1)}>
+                        <button onClick={() => changeQuantity(item.id, +1)}>
                           +
                         </button>
                       </div>
@@ -93,7 +93,7 @@ function Cart() {
                 type="button"
                 onClick={handleCheckout}
                 disabled={loading || cartItems.length === 0}
-                className={loading ? "loading" : "normal"}
+                className={loading ? "loading" : ""}
               >
                 {loading ? (
                   <span className="spinner-wrapper">
